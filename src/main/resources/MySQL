@@ -1,0 +1,59 @@
+-- CREATE DATABASE IF NOT EXISTS ZingBase;
+--USE ZingBase;
+
+-- DROP TABLE IF EXISTS user_hobby;
+-- DROP TABLE IF EXISTS hobby;
+-- DROP TABLE IF EXISTS users;
+
+-- CREATE TABLE users (
+--     id INT AUTO_INCREMENT PRIMARY KEY,
+--     username VARCHAR(50) UNIQUE NOT NULL,
+--     name VARCHAR(50),
+--     lastname VARCHAR(50),
+--     birthdate DATE,
+--     email VARCHAR(100) UNIQUE NOT NULL,
+--     password VARCHAR(100) NOT NULL,
+--     gender VARCHAR(10)
+-- );
+
+-- CREATE TABLE hobby (
+--     hobby_id INT PRIMARY KEY,
+--     hobby_name VARCHAR(50) NOT NULL
+-- );
+
+-- -- Create 'user_hobby' mapping table
+-- CREATE TABLE user_hobby (
+--     user_id INT,
+--     hobby_id INT,
+--     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+--     FOREIGN KEY (hobby_id) REFERENCES hobby(hobby_id) ON DELETE CASCADE
+-- );
+
+-- -- Insert default hobbies
+-- INSERT INTO hobby (hobby_id, hobby_name) VALUES
+-- (1, 'Music'),
+-- (2, 'Sports'),
+-- (3, 'Books'),
+-- (4, 'Gaming'),
+-- (5, 'Cooking'),
+-- (6, 'Travel'),
+-- (7, 'Photography'),
+-- (8, 'Art');
+-- CREATE TABLE matches (
+--     id INT AUTO_INCREMENT PRIMARY KEY,
+--     sender_id INT NOT NULL,
+--     receiver_id INT NOT NULL,
+--     UNIQUE KEY unique_match (sender_id, receiver_id),
+--     FOREIGN KEY (sender_id) REFERENCES users(id) ON DELETE CASCADE,
+--     FOREIGN KEY (receiver_id) REFERENCES users(id) ON DELETE CASCADE
+-- );
+-- CREATE TABLE messages (
+--     id INT AUTO_INCREMENT PRIMARY KEY,
+--     sender_id INT NOT NULL,
+--     receiver_id INT NOT NULL,
+--     message TEXT NOT NULL,
+--     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+--     FOREIGN KEY (sender_id) REFERENCES users(id),
+--     FOREIGN KEY (receiver_id) REFERENCES users(id)
+-- );

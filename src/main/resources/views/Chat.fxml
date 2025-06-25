@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.controller.ChatController"
+      spacing="10"
+      style="-fx-background-color: black; -fx-padding: 15;">
+
+    <Label text="Chat"
+           style="-fx-text-fill: #00BFFF; -fx-font-size: 24px; -fx-font-weight: bold;" />
+
+    <ScrollPane fx:id="messageScrollPane"
+                prefHeight="400"
+                style="-fx-background: transparent;">
+        <VBox fx:id="messageListVBox" spacing="5" style="-fx-padding: 5;" />
+    </ScrollPane>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <TextArea fx:id="messageInput"
+                  promptText="Type your message..."
+                  prefRowCount="2"
+                  wrapText="true"
+                  style="-fx-background-color: #222; -fx-text-fill: #00BFFF;"/>
+        <Button text="Send"
+                fx:id="sendButton"
+                onAction="#onSendMessage"
+                style="-fx-background-color: #00BFFF; -fx-text-fill: black; -fx-font-weight: bold;"/>
+    </HBox>
+
+</VBox>

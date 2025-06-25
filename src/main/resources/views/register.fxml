@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.controller.RegisterController"
+      alignment="CENTER" spacing="10"
+      style="-fx-background-color: black; -fx-padding: 20;">
+
+    <Label text="Register" style="-fx-text-fill: lightblue; -fx-font-size: 20;" />
+
+    <TextField fx:id="usernameField" promptText="Username" />
+    <TextField fx:id="nameField" promptText="Name" />
+    <TextField fx:id="lastnameField" promptText="Last Name" />
+    <DatePicker fx:id="birthDatePicker" />
+    <TextField fx:id="emailField" promptText="Email" />
+    <PasswordField fx:id="passwordField" promptText="Password" />
+
+    <ComboBox fx:id="genderCombo" promptText="Gender" />
+
+    <Label text="Hobbies" style="-fx-text-fill: lightblue;" />
+    <CheckBox fx:id="hobbyMusic" text="Music" />
+    <CheckBox fx:id="hobbySports" text="Sports" />
+    <CheckBox fx:id="hobbyBooks" text="Books" />
+    <CheckBox fx:id="hobbyGaming" text="Gaming" />
+    <CheckBox fx:id="hobbyCooking" text="Cooking" />
+    <CheckBox fx:id="hobbyTravel" text="Travel" />
+    <CheckBox fx:id="hobbyPhotography" text="Photography" />
+    <CheckBox fx:id="hobbyArt" text="Art" />
+
+
+    <Button text="Register" onAction="#onRegister" style="-fx-background-color: lightblue;" />
+    <Label fx:id="messageLabel" style="-fx-text-fill: lightblue;" />
+    <Button text="Back to Login" onAction="#switchToLogin"
+            style="-fx-background-color: transparent; -fx-text-fill: lightblue;" />
+</VBox>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ComboBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.controller.UpdateProfileController"
+      style="-fx-background-color: black;">
+
+    <Label text="Update Profile"
+           style="-fx-font-size: 24px; -fx-text-fill: #00BFFF;" />
+
+    <HBox spacing="10">
+        <Label text="First Name:" style="-fx-text-fill: white;" prefWidth="100"/>
+        <TextField fx:id="nameField" promptText="First Name" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Password:" style="-fx-text-fill: white;" prefWidth="100"/>
+        <PasswordField fx:id="passwordField" promptText="Leave empty to keep current" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Last Name:" style="-fx-text-fill: white;" prefWidth="100"/>
+        <TextField fx:id="lastNameField" promptText="Last Name" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Email:" style="-fx-text-fill: white;" prefWidth="100"/>
+        <TextField fx:id="emailField" promptText="Email" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Birthdate:" style="-fx-text-fill: white;" prefWidth="100"/>
+        <DatePicker fx:id="birthDatePicker" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Gender:" style="-fx-text-fill: white;" prefWidth="100"/>
+        <ComboBox fx:id="genderCombo" prefWidth="150" />
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Hobbies:" style="-fx-text-fill: white;" prefWidth="100"/>
+        <TextField fx:id="hobbiesField" promptText="Hobbies (comma separated)" />
+    </HBox>
+
+    <Label fx:id="messageLabel" style="-fx-text-fill: lightgreen;" />
+
+    <HBox spacing="20" alignment="center">
+        <Button text="Update" onAction="#onUpdate" style="-fx-background-color: #00BFFF; -fx-text-fill: black; -fx-font-weight: bold;" />
+        <Button text="Cancel" onAction="#onCancel" style="-fx-background-color: #333; -fx-text-fill: white;" />
+    </HBox>
+
+</VBox>
